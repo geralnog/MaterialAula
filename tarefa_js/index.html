@@ -1,0 +1,113 @@
+<style>
+  body {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgoldenrodyellow !important;
+  }
+
+  #text {
+    text-align: justify;
+    color: black;
+  }
+
+  .div_container {
+    width: 60%;
+    padding: 15px 30px;
+    background-color: lightgray;
+    text-align: center;
+  }
+
+  #button_phrases,
+  #add_sujeito,
+  #add_verbo,
+  #add_objeto {
+    text-align: center;
+    margin: 5px;
+  }
+
+  @media (max-width: 768px) {
+    #text {
+      width: auto;
+    }
+  }
+</style>
+
+<!doctype html>
+<html>
+  <head>
+    <title>INDEX</title>
+    <!--INCLUDING BOOTSTRAP-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <script src="/materialaula/tarefa_js/aula.js" defer></script>
+  </head>
+
+  <body>
+    <div class="div_container" id="text">
+      <h3 align="center">Exercício 1.1</h3>
+      1.1. Defina três arrays com conteúdos à sua escolha: sujeitos, verbos,
+      objectos. Quando o utilizador clicar num botão, o JS gera e mostra uma
+      frase aleatória como: “O gato dança na praia.”
+    </div>
+
+    <div class="div_container">
+      <button type="button" id="button_phrases" class="btn btn-danger">
+        Gerar Frases
+      </button>
+    </div>
+
+    <div class="div_container" id="text">
+      <h3 align="center">Exercício 1.2</h3>
+      1.2. Crie três botões: adicionar sujeito, adicionar verbo, adicionar
+      objecto. Ao clicar no botão, é aberto um prompt a questionar o user o que
+      quer adicionar. Os botões devem estar ligados apenas a uma função que
+      adicione o que o user colocar no array certo.
+    </div>
+
+    <div class="div_container">
+      <button type="button" id="add_sujeito" class="btn btn-danger">
+        Adicionar Sujeito
+      </button>
+      <button type="button" id="add_verbo" class="btn btn-danger">
+        Adicionar Verbo
+      </button>
+      <button type="button" id="add_objeto" class="btn btn-danger">
+        Adicionar Objeto
+      </button>
+    </div>
+
+    <div class="div_container" id="text">
+      <h3 align="center">Exercício 2</h3>
+      2. Mini Jogo “Adivinha o Número”
+
+Ao clicar num botão, o JS escolhe um número aleatório entre 1 e 20;
+O utilizador tenta adivinhar via prompt(), até acertar;
+O jogo dá dicas ("está longe", "está perto").
+    </div>
+
+    <div class="div_container">
+      <button type="button" id="button_phrases" class="btn btn-danger">
+        Gerar Frases
+      </button>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+</html>
