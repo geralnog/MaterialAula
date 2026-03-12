@@ -90,3 +90,65 @@ function addelement() {
 document.addEventListener("DOMContentLoaded", () => {
   addelement();
 });
+
+////////////////// Exercício 2 //////////////////
+
+function advinhaNumero() {
+  let numeroAleatorio = Math.floor(Math.random() * 20) + 1;
+  let tentativa = null;
+  while (tentativa !== numeroAleatorio) {
+    tentativa = parseInt(prompt("Adivinhe o número entre 1 e 20:"));
+    if (tentativa < numeroAleatorio) {
+      alert("Está longe! Tente um número maior.");
+    } else if (tentativa > numeroAleatorio) {
+      alert("Está longe! Tente um número menor.");
+    } else {
+      alert("Parabéns! Você acertou!");
+    }
+  }
+}
+
+document
+  .getElementById("guess_number")
+  .addEventListener("click", advinhaNumero);
+
+////////////////// Exercício 3 //////////////////
+
+const letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const numeros = "0123456789".split("");
+const simbolos = "!@#$%^&*()_-+=<>?/{}[]".split("");
+
+
+document.getElementById("pass_generator").addEventListener("click", function () {
+  
+  let tamanho = prompt("Quantos caracteres quer a senha? (Escreva 'fim' para sair)");
+
+  if (!tamanho || tamanho.toLowerCase() === "fim") {
+    alert("Programa terminado.");
+    return;
+  }
+
+  tamanho = parseInt(tamanho);
+
+  if (isNaN(tamanho) || tamanho <= 0) {
+    alert("Por favor, introduza um número válido.");
+    return;
+  }
+
+  const senha = gerarSenha(tamanho);
+  alert("A sua palavra-passe é: " + senha);
+});
+
+
+function gerarSenha(tamanho) {
+  const base = [...letras, ...numeros, ...simbolos];
+  let senha = "";
+
+  for (let i = 0; i < tamanho; i++) {
+    const indice = Math.floor(Math.random() * base.length);
+    senha += base[indice];
+  }
+
+  return senha;
+}
+
