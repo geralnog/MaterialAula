@@ -1,0 +1,98 @@
+body {
+  scroll-behavior: smooth;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
+}
+
+nav a:hover {
+  background-color: darkslategray;
+}
+
+.navbar {
+  background-color: var(--nav-bg) !important;
+  transition: background-color 0.3s ease;
+}
+
+#main_text_div,
+.card {
+  margin: 10px auto;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: justify;
+  font-family: "Iosevka Charon", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2em;
+  background-color: var(--card-bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button_caps {
+  text-transform: uppercase;
+  font-family: "Iosevka Charon", monospace;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.card-img-top {
+  width: 50%;
+  border-radius: 50%;
+}
+
+.card-deck {
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  #text {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: red;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: burlywood;
+  margin: 50px 0px;
+  height: 50px;
+}
+
+
+:root {
+  --text: #000000;
+  --card-bg: #ffffff;
+  --nav-bg: #363636;
+
+}
+
+.dark-mode {
+  --text: #ffffff; 
+  --card-bg: blue;
+  --nav-bg: #222021;
+}
+
+
+input[type="color"] {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}

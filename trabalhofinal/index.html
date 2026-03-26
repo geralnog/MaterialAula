@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Trabalho Final Geraldo Nogueira</title>
+    <!--INCLUDING BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="CSS/trabalhofinal.css" />
+
+    <script src="JS/trabalhofinal.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+</body>
+
+<body id="head">
+    <nav class="navbar navbar-expand-md navbar-dark mb-4">
+        <div class="container-fluid">
+            <span class="navbar-brand" href="#">GN</span>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#head">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#aventuras">Aventuras</a></li>
+                    <li class="nav-item">
+                        <button id="reset" class="bg-transparent border-0">
+                            <a class="nav-link disabled bg-transparent">Reset Ajustes</a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="container">
+        <div class="card-deck">
+            <div class="card">
+
+                <input type="file" id="avatarFile" accept="image/*" style="display:none;">
+
+                <img id="avatar" class="card-img-top" src="/materialaula/trabalhofinal/imagens/avatar.jpg"
+                    alt="Card image cap">
+
+                <div class="card-body">
+                    <h5 class="card-title">Hello World...</h5>
+                    <p class="card-text">Meu nome é Geraldo Nogueira, tenho 39
+                        anos, sou natural brasil e atualmente
+                        resido em
+                        Porto Portugal. Sou estudante de Programação Web no
+                        Cesae. Tenho uma paixão por tecnologia e
+                        adoro
+                        explorar novas linguagens de programação e frameworks.
+                        No meu tempo livre, gosto de ler livros
+                        sobre
+                        desenvolvimento pessoal e assistir a documentários sobre
+                        ciência e tecnologia.
+
+                        Estou entusiasmado por fazer parte deste curso e espero
+                        adquirir conhecimentos valiosos que me
+                        ajudarão
+                        a crescer como desenvolvedor web. Estou ansioso para
+                        colaborar com meus colegas e aprender com
+                        os
+                        instrutores ao longo desta jornada.
+                    <p>
+                    <p class="card-text">Meus Hobbies São:
+
+
+                    <ul id="hobbyList">
+                        <li>Cozinhar</li>
+                        <li>Ouvir Música</li>
+                        <li>Andar de Bicicleta</li>
+                    </ul>
+
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="InputEmail">Endereço de Email
+                            </label>
+                            <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword">Password</label>
+                            <input type="password" class="form-control" id="InputPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputHint">Dica Password</label>
+                            <input type="password" class="form-control" id="InputHint">
+                        </div>
+
+
+                        <button id="btnLogin" type="button" class="btn btn-primary">Login</button>
+                        <button id="btnLogoff" type="button" class="btn btn-primary">Logoff</button>
+                        <button id="btnCriar" type="button" class="btn btn-primary">Criar Conta</button>
+
+                        <br><br>
+                        <button id="btnHint" type="button" class="btn btn-danger">
+                            Click Here if you forgot your password
+                        </button>
+
+                    </form>
+                </div>
+                <hr>
+                <div class="card-body">
+                    <img id="me_photo" class="card-img-top" src="../trabalhofinal/imagens/foto.jpg"
+                        alt="Card image cap"><br><br>
+                    <h3 class="text-black">Personalizar Portfólio</h3>
+                    <form>
+                        <label for="firstname">First name:</label>
+                        <input type="text" id="firstname" value=""><br>
+                    </form>
+                    <span>Frase de Apresentação:</span><br>
+                    <textarea id="text_area" rows="2" cols="20">
+
+                    </textarea>
+                    <h3>Escolha uma cor:</h3>
+
+                    <label for="favColor">Escolha uma cor:</label>
+                    <input type="color" id="favColor" value="#ff0000"><br>
+
+                    <form>
+                        <label for="Foto_URL">Foto (URL):</label>
+                        <input type="text" id="Foto_URL" value="">
+                    </form>
+                    <br>
+                    <button id="atualizar_portfolio" class="btn btn-primary ml-auto button_caps">
+                        Atualizar Portfólio </button>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div id="aventuras" class="card-deck">
+            <div class="card">
+
+                <div class="card-body">
+                    <h5 class="card-title">Aventura 1</h5>
+                    <p class="card-text">Mude o tema e veja uma outra
+                        versão do meu website.</p>
+                    <button id="darkmode" class="btn btn-primary ml-auto button_caps">
+                        Mudar tema 🌙 </button>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Aventura 2</h5>
+                    <p class="card-text">Troque o meu avatar por outra
+                        imagem divertida.</p>
+                    <button id="changeAvatar" class="btn btn-primary ml-auto button_caps">
+                        Mudar avatar 👨</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Aventura 3</h5>
+                    <p class="card-text">Adicione um novo Hobby a lista
+                        e me ajude a fazer algo novo.</p>
+                    <button id="addHobbyBtn" class="btn btn-primary ml-auto button_caps">Adicionar hobby 🛵</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body" align="center">
+                    <p class="card-text">API ESPOCA
+                    <p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>Geraldo Nogueira - 2026</div>
+            <div>&nbsp;</div>
+        </footer>
+    </main>
+</body>
+
+</html>
